@@ -1,0 +1,13 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+.card {
+  margin: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+}
+
+.logo {
+  height: 70px;
+}
