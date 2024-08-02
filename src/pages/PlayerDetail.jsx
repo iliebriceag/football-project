@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { fetchNews } from '../api/CallApi.js';
 
 function PlayerDetail() {
-  const { id } = useParams(); // Get the ID from the URL
+  const { id } = useParams();
   const [player, setPlayer] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -16,10 +16,10 @@ function PlayerDetail() {
         if (playerData) {
           setPlayer(playerData);
         } else {
-          setError('Jucătorul nu a fost găsit'); // Player not found
+          setError('Jucătorul nu a fost găsit');
         }
       } catch (error) {
-        setError('Eroare la încărcarea datelor'); // Error fetching data
+        setError('Eroare la încărcarea datelor');
       } finally {
         setLoading(false);
       }
