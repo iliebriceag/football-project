@@ -58,7 +58,7 @@ function Contact() {
             </p>
             <p className="text-muted">
               <i className="bi bi-telephone-fill me-2"></i>
-              <strong>Phone:</strong> 0712 345 678
+              <strong>Telefon:</strong> 0712 345 678
             </p>
           </div>
         </div>
