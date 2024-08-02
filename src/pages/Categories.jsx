@@ -55,7 +55,7 @@ function Categories() {
         {filteredNews.map((item) => (
           <div className="col" key={item.id}>
             <div className="card">
-              <Link to={`/player/${item.id}`} className="text-decoration-none text-dark">
+              <Link to={`/jucator/${item.id}`} className="text-decoration-none text-dark">
                 <img src={item.image} className="card-img-top" alt={item.name} />
                 <div className="card-body">
                   <h4 className="card-title">{item.name}</h4>

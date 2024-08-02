@@ -15,7 +15,7 @@ function Navbar() {
                             <Link class="nav-link" to="/"><i class="bi bi-house-door-fill me-1"></i></Link>
                         </li>
                         <li class="nav-item">
-                            <Link class="nav-link" to="/news">Categorii</Link>
+                            <Link class="nav-link" to="/categorii">Categorii</Link>
                         </li>
                         <li class="nav-item">
                             <Link class="nav-link" to="/contact">Contact</Link>

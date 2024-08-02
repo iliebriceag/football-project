@@ -20,9 +20,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/news" element={<Categories />} />
+          <Route path="/categorii" element={<Categories />} />
           <Route path="*" element={<Page404 />} />
-          <Route path="/player/:id" element={<PlayerDetail />} />
+          <Route path="/jucator/:id" element={<PlayerDetail />} />
         </Routes>
 
         <Footer />
