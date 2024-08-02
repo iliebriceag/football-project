@@ -28,7 +28,9 @@ function PlayerDetail() {
     getPlayer();
   }, [id]);
 
-  if (loading) return <p className="d-flex justify-content-center mt-5">Se încarcă...</p>;
+  if (loading) return <div className="d-flex justify-content-center mt-5"><div class="spinner-border spinner" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div></div>;
   if (error) return <p className="text-danger text-center">{error}</p>;
 
   if (!player) return <p className="text-center">Jucătorul nu a fost găsit</p>;

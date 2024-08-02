@@ -103,6 +103,11 @@ body, html {
   font-size: 1.5rem!important;
 }
 
+/* spinner color */
+.spinner {
+ color: #65A844;
+}
+
 /* contact */
 .section-contact-part {
   background-color: white;

@@ -23,7 +23,9 @@ function Home() {
     getNews();
   }, []);
 
-  if (loading) return <p className="d-flex justify-content-center mt-5">Se încarcă...</p>;
+  if (loading) return <div className="d-flex justify-content-center mt-5"><div class="spinner-border spinner" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div></div>;
   if (error) return <p>Eroare: {error}</p>;
 
   const filteredNews = news.filter(item =>
