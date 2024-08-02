@@ -1,6 +1,7 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
 }
@@ -21,13 +22,13 @@ body, html {
 }
 
 .nav-link {
-  color: white!important;
+  color: white !important;
 }
 
 /* card */
 .card {
   position: relative;
-  border: none!important;
+  border: none !important;
   margin-top: 20px;
 }
 
@@ -35,9 +36,6 @@ body, html {
   width: 100%;
   height: 350px;
   object-fit: cover;
-  position: relative; 
-  top: 0; 
-  left: 0; 
 }
 
 .card .card-body {
@@ -62,6 +60,7 @@ body, html {
   border-radius: 30px;
   padding: 5px 20px;
 }
+
 .my-btn-secondary {
   background: white;
   color: #333;
@@ -86,26 +85,26 @@ body, html {
 
 /* search */
 .form-control {
-  border-top-right-radius: 50px!important;
-  border-bottom-right-radius: 50px!important;
-  border: none!important;
-  padding: 0px 50px!important;
+  border-top-right-radius: 50px !important;
+  border-bottom-right-radius: 50px !important;
+  border: none !important;
+  padding: 0px 50px !important;
   height: 70px;
   background-color: white;
 }
 
 .input-group-text {
-  border: none!important;
-  border-top-left-radius: 50px!important;
-  border-bottom-left-radius: 50px!important;
+  border: none !important;
+  border-top-left-radius: 50px !important;
+  border-bottom-left-radius: 50px !important;
   height: 70px;
-  background-color: white!important;
-  font-size: 1.5rem!important;
+  background-color: white !important;
+  font-size: 1.5rem !important;
 }
 
 /* spinner color */
 .spinner {
- color: #65A844;
+  color: #65A844;
 }
 
 /* contact */
@@ -114,9 +113,17 @@ body, html {
   padding: 20px 50px;
   border-radius: 50px;
 }
-.section-contact-part p{
+
+.section-contact-part p {
   margin-top: 50px;
-} 
+}
+
+/* page detail */
+.image-detail {
+  width: 100%;
+  height: auto;
+}
+
 /* footer */
 .footer {
   height: 100px;

@@ -7,7 +7,7 @@ function Contact() {
       <p className='text-muted text-center mb-5'>În această secțiune găsiți detaliile noastre de contact.</p>
 
       <div className="row">
-        <div className="col-md-6">
+        <div className="col-md-6 mt-5">
           <form onSubmit='test'>
             <div className="mb-3">
               <label htmlFor="name" className="form-label">Nume</label>
@@ -42,7 +42,7 @@ function Contact() {
             <button type="submit" className="my-btn-primary">Trimite</button>
           </form>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-6 mt-5 py-2">
           <div className="section-contact-part">
             <p className="text-muted">
               <i className="bi bi-person-fill me-2"></i>
