@@ -39,7 +39,7 @@ function Contact() {
                 required
               ></textarea>
             </div>
-            <button type="submit" className="my-btn-primary">Submit</button>
+            <button type="submit" className="my-btn-primary">Trimite</button>
           </form>
         </div>
         <div className="col-md-6">
