@@ -4,7 +4,7 @@ import './../css/Card.css';
 
 const PlayerCard = ({ item, isFavorite, onFavorite }) => {
   return (
-    <div className="col" key={item.id}>
+    <div className="col animate fadeInUp one-six" key={item.id}>
       <div className="card">
         <img src={item.image} className="card-img-top" alt={item.name} />
         <button

@@ -44,6 +44,7 @@ const ScrollToTop = () => {
                     justifyContent: 'center',
                     fontSize: '24px',
                 }}
+                className='animate fadeInRight'
             >
                 <i class="bi bi-chevron-compact-up"></i>
             </button>
