@@ -2,12 +2,20 @@ import React, { useEffect, useState } from 'react';
 import { fetchNews } from '../api/CallApi.js';
 import Spinner from '../components/Spinner';
 import Card from '../components/Card';
+import Notification from '../components/Banner';
 
 function Categories() {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState('Toți');
+  const [favorites, setFavorites] = useState([]);
+  const [notification, setNotification] = useState({ message: '', visible: false });
+
+  useEffect(() => {
+    const savedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    setFavorites(savedFavorites);
+  }, []);
 
   useEffect(() => {
     const getNews = async () => {
@@ -24,11 +32,28 @@ function Categories() {
     getNews();
   }, []);
 
+  const handleFavorite = (item) => {
+    let updatedFavorites;
+    if (favorites.some(fav => fav.id === item.id)) {
+      updatedFavorites = favorites.filter(fav => fav.id !== item.id);
+      setNotification({ message: 'Șters de la favorite!', visible: true });
+    } else {
+      updatedFavorites = [...favorites, item];
+      setNotification({ message: 'Adăugat la favorite!', visible: true });
+    }
+    setFavorites(updatedFavorites);
+    localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+
+    setTimeout(() => {
+      setNotification({ ...notification, visible: false });
+    }, 3000);
+  };
+
   if (loading) {
     return <Spinner />;
   }
-  
-  if (error) return <p>Eroare: {error}</p>;
+
+  if (error) return <p>Error: {error}</p>;
 
   const filteredNews = selectedCategory === 'Toți'
     ? news
@@ -38,6 +63,8 @@ function Categories() {
 
   return (
     <div className="container">
+      <Notification message={notification.message} visible={notification.visible} />
+
       <h1 className='text-center'>Categorii</h1>
       <p className='text-muted text-center mb-5'>În această secțiune găsiți detalii despre mai mulți jucători de nivel mare.</p>
 
@@ -55,7 +82,12 @@ function Categories() {
 
       <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
         {filteredNews.map((item) => (
-          <Card key={item.id} item={item} />
+          <Card
+            key={item.id}
+            item={item}
+            isFavorite={favorites.some(fav => fav.id === item.id)}
+            onFavorite={() => handleFavorite(item)}
+          />
         ))}
       </div>
     </div>

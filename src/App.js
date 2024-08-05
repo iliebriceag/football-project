@@ -6,6 +6,7 @@ import Contact from './pages/Contact';
 import Categories from './pages/Categories';
 import Page404 from './pages/Page404';
 import Home from './pages/Home';
+import Favorites from './pages/Favorites';
 import PlayerDetail from './pages/PlayerDetail';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/categorii" element={<Categories />} />
           <Route path="*" element={<Page404 />} />
           <Route path="/jucator/:id" element={<PlayerDetail />} />
+          <Route path="/favorite" element={<Favorites />} />
         </Routes>
 
         <Footer />

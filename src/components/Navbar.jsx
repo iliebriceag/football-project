@@ -25,6 +25,9 @@ function Navbar() {
                             <Link className="nav-link" to="/" onClick={handleLinkClick}>Acasă</Link>
                         </li>
                         <li className="nav-item">
+                            <Link className="nav-link" to="/favorite" onClick={handleLinkClick}>Favorite</Link>
+                        </li>
+                        <li className="nav-item">
                             <Link className="nav-link" to="/categorii" onClick={handleLinkClick}>Categorii</Link>
                         </li>
                         <li className="nav-item">
