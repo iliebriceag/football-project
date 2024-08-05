@@ -40,7 +40,7 @@ function PlayerDetail() {
     const { name, title, description, data, image, category } = player;
 
     return (
-        <div className="container">
+        <div className="container mt-5">
             <div className="row">
                 <div className="col-md-6 mt-5">
                     <img className="image-detail" src={image} alt={name} />

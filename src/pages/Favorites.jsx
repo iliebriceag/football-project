@@ -14,7 +14,7 @@ function Favorites() {
   }
 
   return (
-    <div className="container">
+    <div className="container mt-5">
       <h1 className='text-center'>Favorite</h1>
 
       <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">

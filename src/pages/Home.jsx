@@ -4,6 +4,7 @@ import Spinner from '../components/Spinner';
 import Card from '../components/Card';
 import Pagination from '../components/Pagination';
 import Notification from '../components/Banner';
+import Header from '../components/Header';
 
 function Home() {
   const [news, setNews] = useState([]);
@@ -46,7 +47,7 @@ function Home() {
     }
     setFavorites(updatedFavorites);
     localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
-    
+
     setTimeout(() => {
       setNotification({ ...notification, visible: false });
     }, 3000);
@@ -68,42 +69,47 @@ function Home() {
   const totalPages = Math.ceil(filteredNews.length / itemsPerPage);
 
   return (
-    <div className="container">
-      <Notification message={notification.message} visible={notification.visible} />
+    <div>
+      <Header />
+      <div className="container mt-5">
 
-      <div className="mb-4 text-center">
-        <div className="input-group">
-          <span className="input-group-text" id="basic-addon1">
-            <i className="bi bi-search"></i>
-          </span>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Caută după nume..."
-            aria-label="Search"
-            aria-describedby="basic-addon1"
-            value={searchQuery}
-            onChange={e => setSearchQuery(e.target.value)}
-          />
+
+        <Notification message={notification.message} visible={notification.visible} />
+
+        <div className="mb-4 text-center">
+          <div className="input-group">
+            <span className="input-group-text" id="basic-addon1">
+              <i className="bi bi-search"></i>
+            </span>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Caută după nume..."
+              aria-label="Search"
+              aria-describedby="basic-addon1"
+              value={searchQuery}
+              onChange={e => setSearchQuery(e.target.value)}
+            />
+          </div>
         </div>
-      </div>
 
-      <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
-        {currentItems.map((item) => (
-          <Card
-            key={item.id}
-            item={item}
-            isFavorite={favorites.some(fav => fav.id === item.id)}
-            onFavorite={() => handleFavorite(item)}
-          />
-        ))}
-      </div>
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
+          {currentItems.map((item) => (
+            <Card
+              key={item.id}
+              item={item}
+              isFavorite={favorites.some(fav => fav.id === item.id)}
+              onFavorite={() => handleFavorite(item)}
+            />
+          ))}
+        </div>
 
-      <Pagination
-        totalPages={totalPages}
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-      />
+        <Pagination
+          totalPages={totalPages}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+        />
+      </div>
     </div>
   );
 }

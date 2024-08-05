@@ -3,7 +3,7 @@ import './../css/Contact.css';
 
 function Contact() {
   return (
-    <div className="container">
+    <div className="container mt-5">
       <h1 className='text-center'>Contact</h1>
       <p className='text-muted text-center mb-5'>În această secțiune găsiți detaliile noastre de contact.</p>
 

@@ -62,7 +62,7 @@ function Categories() {
   const categories = ['Toți', ...new Set(news.map(item => item.category))];
 
   return (
-    <div className="container">
+    <div className="container mt-5">
       <Notification message={notification.message} visible={notification.visible} />
 
       <h1 className='text-center'>Categorii</h1>

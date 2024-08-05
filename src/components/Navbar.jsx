@@ -12,7 +12,7 @@ function Navbar() {
     };
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark mb-5">
+        <nav className="navbar navbar-expand-lg navbar-dark">
             <div className="container">
                 <img src="/icon.png" className="logo" alt="fotabl" />
                 <Link className="navbar-brand fw-bold ms-1" to="/">Fotbal</Link>
