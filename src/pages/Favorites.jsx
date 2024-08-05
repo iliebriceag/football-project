@@ -15,7 +15,8 @@ function Favorites() {
 
   return (
     <div className="container">
-      <h1 className="text-center mb-4">Favorite News</h1>
+      <h1 className='text-center'>Favorite</h1>
+
       <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
         {favorites.map((item) => (
           <Card key={item.id} item={item} isFavorite={true} />
