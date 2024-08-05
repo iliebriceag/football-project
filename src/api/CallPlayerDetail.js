@@ -1,6 +1,6 @@
 export const fetchPlayerDetail = async (id) => {
     try {
-        const response = await fetch(`https://my-api-ilibriceag.netlify.app/api/news?id=${id}`);
+        const response = await fetch(`https://my-api-ilibriceag.netlify.app/api/players?id=${id}`);
         if (!response.ok) {
             throw new Error('Eroare încărcare date');
         }

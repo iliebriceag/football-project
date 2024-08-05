@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchPlayerDetail } from '../api/CallPlayerDetail';
 import Spinner from '../components/Spinner';
+import './../css/PlayerDetail.css';
 
 function PlayerDetail() {
     const { id: paramId } = useParams();

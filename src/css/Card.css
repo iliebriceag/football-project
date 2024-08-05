@@ -1,0 +1,25 @@
+.card {
+    position: relative;
+    border: none !important;
+    margin-top: 20px;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+  
+  .card .card-body {
+    height: 300px;
+  }
+  
+  .card .card-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: none;
+    background-color: #65A844;
+    color: #fff;
+  }

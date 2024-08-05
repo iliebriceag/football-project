@@ -1,4 +1,5 @@
 import React from 'react';
+import './../css/404.css';
 
 function Page404() {
   return (
