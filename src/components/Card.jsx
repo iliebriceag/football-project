@@ -10,8 +10,7 @@ const PlayerCard = ({ item, isFavorite, onFavorite }) => {
         <button
           className={`btn-favorite ${isFavorite ? 'favorited' : ''}`}
           onClick={onFavorite}
-          aria-label={isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
-        >
+          aria-label={isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}>
           {isFavorite ? <i className="bi bi-heart-fill full"></i> : <i className="bi bi-heart-fill naked"></i>}
         </button>
         <Link to={`/jucator/${item.id}`} className="text-decoration-none text-dark">
@@ -28,5 +27,6 @@ const PlayerCard = ({ item, isFavorite, onFavorite }) => {
     </div>
   );
 };
+
 
 export default PlayerCard;
