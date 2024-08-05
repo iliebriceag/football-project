@@ -10,6 +10,13 @@
 
 .nav-link {
   color: white !important;
+  border-radius: 50px;
+}
+
+.nav-link:hover {
+  background-color: white;
+  color: #65A844!important;
+  transition: .3s;
 }
 
 .navbar-collapse.collapse {
