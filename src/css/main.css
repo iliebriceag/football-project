@@ -34,14 +34,13 @@ html {
     padding: 0px 50px !important;
     height: 70px;
     background-color: white;
-  }
-  
-  .input-group-text {
+}
+
+.input-group-text {
     border: none !important;
     border-top-left-radius: 50px !important;
     border-bottom-left-radius: 50px !important;
     height: 70px;
     background-color: white !important;
     font-size: 1.5rem !important;
-  }
-  
+}
