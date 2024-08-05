@@ -20,7 +20,10 @@
   left: 0;
   width: 150px;
   border-top: none;
-  border-radius: 0px;
+  border-top-left-radius: 5px !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
   background-color: rgba(128, 128, 128, 0.575);
   color: white;
 }
