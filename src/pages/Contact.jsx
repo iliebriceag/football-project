@@ -47,7 +47,7 @@ function Contact() {
           <div className="section-contact-part">
             <p className="text-muted">
               <i className="bi bi-person-fill me-2"></i>
-              <strong>Nume:</strong> Fotbal
+              <strong>Nume:</strong> Fotbal - Natura Jocului
             </p>
             <p className="text-muted">
               <i className="bi bi-geo-alt-fill me-2"></i>
