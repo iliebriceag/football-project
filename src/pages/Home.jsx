@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { fetchNews } from '../api/CallApi.js';
 import Spinner from '../components/Spinner';
 import Card from '../components/Card';
+import Pagination from '../components/Pagination';
 
 function Home() {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 8;
 
   useEffect(() => {
     const getNews = async () => {
@@ -34,6 +37,11 @@ function Home() {
     item.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = filteredNews.slice(indexOfFirstItem, indexOfLastItem);
+  const totalPages = Math.ceil(filteredNews.length / itemsPerPage);
+
   return (
     <div className="container">
       <div className="mb-4 text-center">
@@ -54,10 +62,16 @@ function Home() {
       </div>
 
       <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
-        {filteredNews.map((item) => (
+        {currentItems.map((item) => (
           <Card key={item.id} item={item} />
         ))}
       </div>
+
+      <Pagination 
+        totalPages={totalPages} 
+        currentPage={currentPage} 
+        setCurrentPage={setCurrentPage} 
+      />
     </div>
   );
 }

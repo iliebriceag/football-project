@@ -11,6 +11,7 @@ import Home from './pages/Home';
 import PlayerDetail from './pages/PlayerDetail';
 
 
+
 function App() {
   return (
     <Router>
