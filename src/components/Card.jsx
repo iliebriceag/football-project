@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './../css/Card.css';
 
+
 const PlayerCard = ({ item, isFavorite, onFavorite }) => {
   return (
     <div className="col animate fadeInUp one-six" key={item.id}>

@@ -1,0 +1,9 @@
+.banner {
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    background-color: #65A844;
+    color: #fff;
+    padding: 50px;
+    border-radius: 4px;
+}
