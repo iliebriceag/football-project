@@ -70,13 +70,13 @@ function Home() {
 
   return (
     <div>
-      <Header />
-      <div className="container mt-5">
+      <Header/>
+      <div className="container" >
 
 
         <Notification message={notification.message} visible={notification.visible} />
 
-        <div className="mb-4 text-center">
+        <div className="mb-4 text-center" style={{marginTop: '80vh'}}>
           <div className="input-group">
             <span className="input-group-text" id="basic-addon1">
               <i className="bi bi-search"></i>

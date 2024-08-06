@@ -7,8 +7,10 @@
     background-size: cover;
     text-align: center;
     color: #fff;
-    position: relative;
-    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
   }
   
   .header-content {
