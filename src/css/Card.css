@@ -28,6 +28,18 @@
   color: white;
 }
 
+.card .card-text {
+  height: 40px;
+  -webkit-box-orient: vertical;
+  display: block;
+  display: -webkit-box;
+  font-family: sans-serif;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: .9rem;
+}
+
 .card .btn-favorite {
   position: absolute;
   top: -10px;

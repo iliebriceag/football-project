@@ -37,7 +37,7 @@ function PlayerDetail() {
         return <p className="text-center">Jucătorul nu a fost găsit</p>;
     }
 
-    const { name, title, description, data, image, category } = player;
+    const { name, title, description, data, image, category, current_team } = player;
 
     return (
         <div className="container mt-5">
@@ -48,6 +48,16 @@ function PlayerDetail() {
                 <div className="col-md-6 mt-5">
                     <h2>{name}</h2>
                     <p className="text-muted">{category}</p>
+                    <p className="text">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20" height="20">
+                            <g fill="#000000">
+                                <path d="M32 2L12 10v18c0 12 8 26 20 34 12-8 20-22 20-34V10L32 2z" stroke="#000" stroke-width="2" fill="none" />
+                                <path d="M32 6L16 12v14c0 10 6.7 21.5 16 28 9.3-6.5 16-18 16-28V12L32 6z" fill="#000" />
+                                <polygon points="32,20 34,28 42,28 36,32 38,40 32,36 26,40 28,32 22,28 30,28" fill="#FFF" />
+                            </g>
+                        </svg>
+                        Echipa actuală:
+                        <span className='text-muted'> {current_team}</span> </p>
                     <p>{title}</p>
                     <p className="text-muted">{data}</p>
                     <p>{description}</p>
