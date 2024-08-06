@@ -20,9 +20,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/categorii" element={<Categories />} />
-          <Route path="*" element={<Page404 />} />
-          <Route path="/jucator/:id" element={<PlayerDetail />} />
           <Route path="/favorite" element={<Favorites />} />
+          <Route path="/jucator/:id" element={<PlayerDetail />} />
+          <Route path="*" element={<Page404 />} />
+
         </Routes>
 
         <Footer />
