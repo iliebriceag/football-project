@@ -28,7 +28,7 @@ function Favorites() {
   };
 
   if (favorites.length === 0) {
-    return <p className='text-center mt-5 mb-5'>Nu s-au găsit favorite</p>;
+    return <p className='text-center mt-5 mb-5'>Nu s-au găsit favorite!</p>;
   }
 
   return (

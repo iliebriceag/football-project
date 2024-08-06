@@ -9,7 +9,10 @@
   height: 300px;
   object-fit: cover;
 }
-
+.card:hover {
+  transform: scale(1.1);
+  transition: .3s;
+}
 .card .card-body {
   height: 240px;
 }
