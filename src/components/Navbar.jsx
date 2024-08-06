@@ -12,8 +12,8 @@ function Navbar() {
     };
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark">
-            <div className="container">
+        <nav className="navbar navbar-expand-lg navbar-dark container">
+            <div className="container-fluid">
                 <img src="/icon.png" className="logo" alt="fotabl" />
                 <Link className="navbar-brand fw-bold ms-1" to="/">Fotbal</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
