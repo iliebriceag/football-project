@@ -32,7 +32,7 @@ const ScrollToTop = () => {
                     position: 'fixed',
                     bottom: '30px',
                     right: '30px',
-                    backgroundColor: 'white',
+                    backgroundColor: '#f5f5f5',
                     color: '#333',
                     border: '#65A844 1px solid',
                     borderRadius: '50%',
