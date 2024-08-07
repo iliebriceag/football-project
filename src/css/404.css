@@ -6,7 +6,7 @@
 }
 
 .page404 {
-  color: #65A844;
+  color: var(--primaryColor);
   font-weight: 900;
   font-size: 15rem;
 }

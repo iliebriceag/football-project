@@ -1,4 +1,7 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+:root{
+  --primaryColor : #003D79;
+}
 
 body,
 html {
@@ -12,7 +15,7 @@ html {
 }
 
 .my-btn-primary {
-    background: #65A844;
+    background: var(--primaryColor);
     color: #fff;
     border: none;
     border-radius: 30px;

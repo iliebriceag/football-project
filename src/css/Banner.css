@@ -3,7 +3,7 @@
     top: 100px;
     right: 10px;
     color: #fff;
-    background-color: #65A844;
+    background-color: var(--primaryColor);
     padding: 50px;
     border-radius: 4px;
 }

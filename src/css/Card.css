@@ -16,7 +16,7 @@
 }
 
 .card:hover .card-title {
-  color: #65A844;
+  color: var(--primaryColor);
 }
 
 .card .card-body {
@@ -59,7 +59,7 @@
 }
 
 .card .btn-favorite .full {
-  color: #65A844;
+  color: var(--primaryColor);
   font-size: 1.5rem;
 }
 

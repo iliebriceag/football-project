@@ -1,3 +1,3 @@
 .spinner {
-  color: #65A844;
+  color: var(--primaryColor);
 }
