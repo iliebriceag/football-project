@@ -16,7 +16,8 @@ const PlayerCard = ({ item, isFavorite, onFavorite }) => {
         <Link to={`/jucator/${item.id}`} className="text-decoration-none text-dark">
           <div className="card-body">
             <h4 className="card-title">{item.name}</h4>
-            <h5 className="card-title text-muted">{item.title}</h5>
+            <h5 className="card-title text-muted">{item.category}</h5>
+            <h5 className="card-title text-muted">{item.market_value}</h5>
             <p className="card-text">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20" height="20">
                 <g fill="#000000">

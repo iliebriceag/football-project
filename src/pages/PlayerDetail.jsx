@@ -37,7 +37,7 @@ function PlayerDetail() {
         return <p className="text-center">Jucătorul nu a fost găsit</p>;
     }
 
-    const { name, title, description, data, image, category, current_team } = player;
+    const { name, title, description, data, image, category, current_team, market_value, transfer_history, matches_played } = player;
 
     return (
         <div className="container mt-5">
@@ -48,6 +48,7 @@ function PlayerDetail() {
                 <div className="col-md-6 mt-5">
                     <h2>{name}</h2>
                     <p className="text-muted">{category}</p>
+                    <h5 className="text-muted">{market_value}</h5>
                     <p className="text">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20" height="20">
                             <g fill="#000000">
@@ -57,10 +58,47 @@ function PlayerDetail() {
                             </g>
                         </svg>
                         Echipa actuală:
-                        <span className='text-muted'> {current_team}</span> </p>
+                        <span className='text-muted'> {current_team}</span> 
+                    </p>
                     <p>{title}</p>
                     <p className="text-muted">{data}</p>
                     <p>{description}</p>
+                    
+                    <h4>Istoric transferuri</h4>
+                    <table className="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Echipa</th>
+                                <th>An</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {transfer_history.map((transfer, index) => (
+                                <tr key={index}>
+                                    <td>{transfer.team}</td>
+                                    <td>{transfer.year}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                    
+                    <h4>Meciuri jucate</h4>
+                    <table className="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Echipa</th>
+                                <th>Meciuri jucate</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {Object.entries(matches_played).map(([team, matches], index) => (
+                                <tr key={index}>
+                                    <td>{team}</td>
+                                    <td>{matches} meciuri</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
